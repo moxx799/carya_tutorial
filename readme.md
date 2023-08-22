@@ -40,6 +40,12 @@ tar -cvf <file name.tar.gz> <fold path>
 ```Bash
 tar -xvf <file name.tar.gz> 
 ```
+```Bash
+lsof +D /path 
+```
+```Bash
+kill -9 or -15 pid 
+```
 
 And some git operations:
 ```Bash
