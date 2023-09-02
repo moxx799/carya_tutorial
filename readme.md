@@ -68,6 +68,9 @@ To kill the squeue:
 ```Bash
 scancel <pid> 
 ```
+```Bash
+cat myjob.o<123456> 
+```
 
 ### Step 4: Jupyter notebook set up
 
