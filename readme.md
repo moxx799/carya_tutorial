@@ -47,10 +47,11 @@ lsof +D /path
 kill -9 or -15 pid 
 ```
 
-And some git operations:
+### some git operations:
 ```Bash
 git clone -b main --single-branch https://<token>@github.com/<repository>
 ```
+After edit the files, 
 ```Bash
 git commit -m "<your commit description>"
 ```
