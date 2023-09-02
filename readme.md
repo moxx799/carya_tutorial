@@ -51,6 +51,20 @@ And some git operations:
 ```Bash
 git clone -b main --single-branch https://<token>@github.com/<repository>
 ```
+```Bash
+git commit -m "<your commit description>"
+```
+It will tell you which files need to be add
+```Bash
+git add <files>
+```
+commit again
+```Bash
+git commit -m "<your commit description>"
+```
+```Bash
+git push
+```
 ***
 ### Step 3: Please follow the operations with the official operation from UH HPC center
 https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters/
