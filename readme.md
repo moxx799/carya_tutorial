@@ -40,8 +40,7 @@ tar -cvf <file name.tar.gz> <fold path>
 ```Bash
 tar -xvf <file name.tar.gz> 
 ```
-To combine the csv files with same head:
-Go to the directory containing the CSV files
+To combine the csv files with same head,Go to the directory containing the CSV files
 ```Bash
 cd /path/to/csv/files
 ```
