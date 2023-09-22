@@ -41,11 +41,11 @@ tar -cvf <file name.tar.gz> <fold path>
 tar -xvf <file name.tar.gz> 
 ```
 To combine the csv files with same head:
-# Go to the directory containing the CSV files
+Go to the directory containing the CSV files
 ```Bash
 cd /path/to/csv/files
 ```
-# Concatenate the files, keeping the header from only the first file
+Concatenate the files, keeping the header from only the first file
 ```Bash
 head -1 one_of_your_files.csv > merged.csv
 tail -n +2 -q *.csv >> merged.csv
