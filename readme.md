@@ -40,12 +40,26 @@ tar -cvf <file name.tar.gz> <fold path>
 ```Bash
 tar -xvf <file name.tar.gz> 
 ```
+To combine the csv files with same head:
+# Go to the directory containing the CSV files
+```Bash
+cd /path/to/csv/files
+```
+# Concatenate the files, keeping the header from only the first file
+```Bash
+head -1 one_of_your_files.csv > merged.csv
+tail -n +2 -q *.csv >> merged.csv
+```
+To kill some of the ps, check the ps list first and then kill with the pid:
+
 ```Bash
 lsof +D /path 
 ```
 ```Bash
 kill -9 or -15 pid 
 ```
+
+
 
 ### some git operations:
 ```Bash
