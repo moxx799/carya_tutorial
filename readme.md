@@ -79,6 +79,20 @@ git commit -m "<your commit description>"
 ```Bash
 git push
 ```
+To stash the local changes then pull:
+```Bash
+git stash
+```
+```Bash
+git pull
+```
+and delete the stash if wanted or keep the stash:
+```Bash
+git stash drop
+```
+```Bash
+git stash pop
+```
 ***
 ### Step 3: Please follow the operations with the official operation from UH HPC center
 https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters/
