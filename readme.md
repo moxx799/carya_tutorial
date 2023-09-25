@@ -96,7 +96,12 @@ git stash pop
 ***
 ### Step 3: Please follow the operations with the official operation from UH HPC center
 https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters/
-
+Quick command for activate the conda env:
+```Bash
+module add Miniconda3/py310
+source  $(dirname `which python`)/../etc/profile.d/conda.sh
+conda activate /project/chen/lhuang37/ocp-models
+```
 Here are some operations that usefull and not in this tutorial
 To show the size of the dictionary
 ```Bash
