@@ -58,8 +58,6 @@ lsof +D /path
 kill -9 or -15 pid 
 ```
 
-
-
 ### some git operations:
 ```Bash
 git clone -b main --single-branch https://<token>@github.com/<repository>
@@ -96,6 +94,7 @@ git stash pop
 ***
 ### Step 3: Please follow the operations with the official operation from UH HPC center
 https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters/
+
 Quick command for activate the conda env:
 ```Bash
 module add Miniconda3/py310
@@ -116,6 +115,7 @@ To kill the squeue:
 scancel <pid> 
 ```
 ```Bash
+to catch up a task
 cat myjob.o<123456> 
 ```
 
@@ -138,6 +138,7 @@ you will see the address like this, but can't open it
 http://127.0.0.1:8890/?token=gcf45711b1540d5004eff093e7fe8a511d339b28d6171012
 
 * Open a new teminal, type the code and psw, afterwhile you can login the address, even though some error occurs.
+* you may change the port number if it shows the port cannot be listened.
 ```Bash 
 ssh -N -f -L localhost:8888:localhost:8888 lhuang37@carya.rcdc.uh.edu 
 ```
