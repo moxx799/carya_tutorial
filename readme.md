@@ -114,8 +114,8 @@ To kill the squeue:
 ```Bash
 scancel <pid> 
 ```
-```Bash
 to catch up a task
+```Bash
 cat myjob.o<123456> 
 ```
 
