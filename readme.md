@@ -137,11 +137,17 @@ you will see the address like this, but can't open it
 
 http://127.0.0.1:8890/?token=gcf45711b1540d5004eff093e7fe8a511d339b28d6171012
 
-* Open a new teminal, type the code and psw, afterwhile you can login the address, even though some error occurs.
-* you may change the port number if it shows the port cannot be listened.
+* Open a new teminal in your local machine, type
 ```Bash 
-ssh -N -f -L localhost:8888:localhost:8888 lhuang37@carya.rcdc.uh.edu 
+ssh -N -f -L localhost:88<xx>:localhost:88<xx> <username>@carya.rcdc.uh.edu 
 ```
+* The address above can be a 4-digit number like 8888, replace and change the number by yourself if the port is occupied.
+* you may change the port number if it shows the port cannot be listened.
+* Afterwhile you can login the address and start to use the jupyter on your local machine.
+* To check if your local port is occupied, type
+```Bash 
+lsof -i :88<xx>
+```  
 
 # `Do not` need to see the following:
 ***
