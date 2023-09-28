@@ -101,7 +101,8 @@ module add Miniconda3/py310
 source  $(dirname `which python`)/../etc/profile.d/conda.sh
 conda activate /project/chen/lhuang37/ocp-models
 ```
-Here are some operations that usefull and not in this tutorial
+Here are some operations that usefull and not in this tutorial.
+
 To show the size of the dictionary
 ```Bash
 du -h <Path> 
@@ -121,7 +122,7 @@ cat myjob.o<123456>
 
 ### Step 4: Jupyter notebook set up
 
-It's not convinient to build the code with the linux system without GUI, jupyter notebook are recomanded.
+It's not convinient to build the code with the linux system without GUI, jupyter notebook is recomanded.
 
 Here are the method to set up:
 * Set up conda env and activate it, following the UH tutorial
