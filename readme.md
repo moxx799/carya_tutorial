@@ -137,7 +137,7 @@ you will see the address like this, but can't open it
 
 http://127.0.0.1:8890/?token=gcf45711b1540d5004eff093e7fe8a511d339b28d6171012
 
-* Open a new teminal in your local machine, type
+* Open a new teminal on your local machine, type
 ```Bash 
 ssh -N -f -L localhost:88<xx>:localhost:88<xx> <username>@carya.rcdc.uh.edu 
 ```
