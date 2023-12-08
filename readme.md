@@ -99,7 +99,7 @@ Quick command for activate the conda env:
 ```Bash
 module add Miniconda3/py310
 source  $(dirname `which python`)/../etc/profile.d/conda.sh
-conda activate /project/chen/lhuang37/ocp-models
+conda activate /project/chen/envs/ocp-models
 ```
 Here are some operations that usefull and not in this tutorial.
 
