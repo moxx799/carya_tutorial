@@ -132,7 +132,7 @@ conda install notebook
 ```
 * Set up server
 ```Bash 
-jupyter notebook --no-browser --ip=127.0.0.1 --port=8890 
+jupyter notebook --no-browser --ip=127.0.0.1 --port=88<xx> 
 ```
 you will see the address like this, but can't open it
 
@@ -140,7 +140,7 @@ http://127.0.0.1:8890/?token=gcf45711b1540d5004eff093e7fe8a511d339b28d6171012
 
 * Open a new teminal on your local machine, type
 ```Bash 
-ssh -N -f -L localhost:88<xx>:localhost:88<xx> <username>@carya.rcdc.uh.edu 
+ssh -l <username> carya.rcdc.uh.edu -L 88<xx>:127.0.0.1:88<xx>
 ```
 * The address above can be a 4-digit number like 8888, replace and change the number by yourself if the port cannot be listened.
 * Afterwhile you can login the address and start to use the jupyter on your local machine.
