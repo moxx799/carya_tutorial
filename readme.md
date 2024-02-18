@@ -120,7 +120,7 @@ to catch up a task
 cat myjob.o<123456> 
 ```
 
-### Step 4: Jupyter notebook set up
+### Jupyter notebook set up
 
 It's not convinient to build the code with the linux system without GUI, jupyter notebook is recomanded.
 
@@ -148,6 +148,13 @@ ssh -l <username> carya.rcdc.uh.edu -L 88<xx>:127.0.0.1:88<xx>
 ```Bash 
 lsof -i :88<xx>
 ```  
+### Tensorboard remote set up
+1. on local:
+   `ssh -L 16006:127.0.0.1:6006 user@server`
+2. on server:
+   `tensorboard --logdir=<profile-logs> --port=6006 --bind_all`
+3. on local browser:
+   login `127.0.0.1:16006` or `localhost:16006`
 
 # `Do not` need to see the following:
 ***
