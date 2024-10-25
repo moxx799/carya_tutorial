@@ -145,7 +145,7 @@ ssh -l <username> carya.rcdc.uh.edu -L 88<xx>:127.0.0.1:88<xx>
 * The address above can be a 4-digit number like 8888, replace and change the number by yourself if the port cannot be listened.
 * Afterwhile you can login the address and start to use the jupyter on your local machine.
 
-* To the task that in a compute node,
+#### To the task that in a compute node,
 * first you need to request a computer node:
   ` salloc -t 1:00:00 -n 28 -N 1 `
 * then you use the no-browser command upon to listen to the port on that node
