@@ -128,11 +128,11 @@ Here are the method to set up:
 * Set up conda env and activate it, following the UH tutorial
 * Install jupyter
 ```Bash
-conda install notebook
+conda install jupyter lab
 ```
 * Set up server
 ```Bash 
-jupyter notebook --no-browser --ip=127.0.0.1 --port=88<xx> 
+jupyter lab --no-browser --ip=127.0.0.1 --port=88<xx> 
 ```
 you will see the address like this, but can't open it
 
@@ -144,6 +144,14 @@ ssh -l <username> carya.rcdc.uh.edu -L 88<xx>:127.0.0.1:88<xx>
 ```
 * The address above can be a 4-digit number like 8888, replace and change the number by yourself if the port cannot be listened.
 * Afterwhile you can login the address and start to use the jupyter on your local machine.
+
+* To the task that in a compute node,
+* first you need to request a computer node:
+  ` salloc -t 1:00:00 -n 28 -N 1 `
+* then you use the no-browser command upon to listen to the port on that node
+* finnally
+  `ssh -J <user name>@maui.rcdc.uh.edu -L 8848:127.0.0.1:8848 <username>@compute-0-0`
+* so that you can clike the address to use it.
 * To check if the port entry is occupied on your local machine, type
 ```Bash 
 lsof -i :88<xx>
