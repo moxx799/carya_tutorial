@@ -80,7 +80,6 @@ Now, you need to create a new repository on the Github website without creating 
 ```Bash
 git remote add origin https://github.com/moxx799/<repository>.git
 ```
-```
 ```Bash
 git push -u origin main
 ```
@@ -143,6 +142,27 @@ to catch up a task
 cat myjob.o<123456> 
 ```
 
+### RSC key set up
+To authorize your local machine, you can add the RSC key to the server so that you don't need to type the password each time.
+On your local machine:
+```Bash
+ssh-keygen -t rsa -b 4096
+```
+You will be prompted to enter the file path where the key will be saved. By default, it is saved in
+```Bash
+~/.ssh/id_rsa
+```
+Type enter two times to skip the path and passphrase.
+Then copy the generated public key to the remote server
+```Bash
+ssh-copy-id <username>@<remote_host>
+```
+Now the settings are finished, you can log in to the server to check if you still need the password.
+You can find it on 
+```Bash
+~/.ssh/authorized_keys
+```
+You can do more operations on it, such as adding several locals to connect to the server or connect the servers in between.
 ### Jupyter notebook set up
 
 It's not convinient to build the code with the linux system without GUI, jupyter notebook is recomanded.
