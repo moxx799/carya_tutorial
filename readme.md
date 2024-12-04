@@ -40,15 +40,7 @@ tar -cvf <file name.tar.gz> <fold path>
 ```Bash
 tar -xvf <file name.tar.gz> 
 ```
-To combine the csv files with same head,Go to the directory containing the CSV files
-```Bash
-cd /path/to/csv/files
-```
-Concatenate the files, keeping the header from only the first file
-```Bash
-head -1 one_of_your_files.csv > merged.csv
-tail -n +2 -q *.csv >> merged.csv
-```
+
 To kill some of the ps, check the ps list first and then kill with the pid:
 
 ```Bash
@@ -199,6 +191,17 @@ ref: https://code.visualstudio.com/docs/remote/tunnels
 2. Qequest a node` salloc -t 1:00:00 -n 24 --gpus=1 -N 1`
 3. Create a tunnel by `./code tunnel `, select the github and use the code output to connect the account on https://github.com/login/device
 4. Open VSCode on local machine, ctrl+shift+p and type "tunnel" to find the "Remote-Tunnels: Connect to Tunnel..." command. The tunnel I created shows up in the list, click it.
+
+# some other operations as memo
+To combine the csv files with same head,Go to the directory containing the CSV files
+```Bash
+cd /path/to/csv/files
+```
+Concatenate the files, keeping the header from only the first file
+```Bash
+head -1 one_of_your_files.csv > merged.csv
+tail -n +2 -q *.csv >> merged.csv
+```
 
 # `Do not` need to see the following:
 ***
