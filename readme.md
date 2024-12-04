@@ -70,12 +70,8 @@ cd to the folder, and follow the steps below
 rm -rf .git
 ```
 ```Bash
-cd ..
+mv ../<old repository name> ../<new name>
 ```
-```Bash
-mv <old repository name> <new name>
-```
-then cd back to the repository
 ```Bash
 git init
 ```
