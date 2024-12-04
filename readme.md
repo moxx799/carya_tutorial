@@ -59,10 +59,42 @@ kill -9 or -15 pid
 ```
 
 ### some git operations:
+When you start a new project, it is highly recommended to use Github as the project manager.
+How to copy from an existing repo.
+
 ```Bash
 git clone -b main --single-branch https://<token>@github.com/<repository>
 ```
-After edit the files, 
+cd to the folder, and follow the steps below
+```Bash
+rm -rf .git
+```
+```Bash
+cd ..
+```
+```Bash
+mv <old repository name> <new name>
+```
+then cd back to the repository
+```Bash
+git init
+```
+```Bash
+git add .
+``````Bash
+git commit -m "first commit"
+``````Bash
+git branch -M main
+```
+Now, you need to create a new repository on the Github website without creating the .readme, .gitignore or licence.
+``````Bash
+git remote add origin https://github.com/moxx799/<repository>.git
+```
+``````Bash
+git push -u origin main
+```
+Now, a new repository is created, both exist in your local and remote.
+After editing the files, 
 ```Bash
 git commit -m "<your commit description>"
 ```
