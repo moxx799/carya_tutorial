@@ -205,6 +205,7 @@ jupyter lab --no-browser --ip=127.0.0.1 --port=88<xx>
 lsof -i :88<xx>
 ```  
 ### Tensorboard remote set up
+Some of the Ml tasks save the logs as tensorboard, you can open it on your local browser as the following:
 1. on local:
    `ssh -L 16006:127.0.0.1:6006 user@server`
 2. on server:
