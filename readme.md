@@ -194,8 +194,11 @@ ssh -l <username> carya.rcdc.uh.edu -L 88<xx>:127.0.0.1:88<xx>
 * first you need to request a computer node:
   ` salloc -t 1:00:00 -n 28 -N 1 `
 * then you use the no-browser command upon to listen to the port on that node
+```Bash 
+jupyter lab --no-browser --ip=127.0.0.1 --port=88<xx> 
+```
 * finnally
-  `ssh -J <user name>@maui.rcdc.uh.edu -L 8848:127.0.0.1:8848 <username>@compute-0-0`
+  `ssh -J <user name>@carya.rcdc.uh.edu -L 8848:127.0.0.1:8848 <username>@compute-0-0`
 * so that you can clike the address to use it.
 * To check if the port entry is occupied on your local machine, type
 ```Bash 
