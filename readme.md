@@ -78,8 +78,8 @@ to catch up a task
 cat myjob.o<123456> 
 ```
 
-### RSC key set up
-To authorize your local machine, you can add the RSC key to the server so that you don't need to type the password each time.
+### RSA key set up
+To authorize your local machine, you can add the RSA key to the server so that you don't need to type the password each time.
 On your local machine:
 ```Bash
 ssh-keygen -t rsa -b 4096
