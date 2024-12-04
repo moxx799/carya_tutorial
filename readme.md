@@ -49,6 +49,56 @@ lsof +D /path
 ```Bash
 kill -9 or -15 pid 
 ```
+***
+### Step 3: Please follow the operations with the official operation from UH HPC center
+https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters/
+
+Quick command for activate the conda env:
+```Bash
+module add Miniconda3/py310
+source  $(dirname `which python`)/../etc/profile.d/conda.sh
+conda activate /project/chen/envs/ocp-models
+```
+Here are some operations that usefull and not in this tutorial.
+
+To show the size of the dictionary
+```Bash
+du -h <Path> 
+```
+To show the file counts of the dictionary
+```Bash
+find <Path> -type f | wc -l 
+```
+To kill the squeue:
+```Bash
+scancel <pid> 
+```
+to catch up a task
+```Bash
+cat myjob.o<123456> 
+```
+
+### RSC key set up
+To authorize your local machine, you can add the RSC key to the server so that you don't need to type the password each time.
+On your local machine:
+```Bash
+ssh-keygen -t rsa -b 4096
+```
+You will be prompted to enter the file path where the key will be saved. By default, it is saved in
+```Bash
+~/.ssh/id_rsa
+```
+Type enter two times to skip the path and passphrase.
+Then copy the generated public key to the remote server
+```Bash
+ssh-copy-id <username>@<remote_host>
+```
+Now the settings are finished, you can log in to the server to check if you still need the password.
+You can find it on 
+```Bash
+~/.ssh/authorized_keys
+```
+You can do more operations on it, such as adding several locals to connect to the server or connect the servers in between.
 
 ### some git operations:
 When you start a new project, it is highly recommended to use Github as the project manager.
@@ -113,56 +163,8 @@ git stash drop
 ```Bash
 git stash pop
 ```
-***
-### Step 3: Please follow the operations with the official operation from UH HPC center
-https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters/
 
-Quick command for activate the conda env:
-```Bash
-module add Miniconda3/py310
-source  $(dirname `which python`)/../etc/profile.d/conda.sh
-conda activate /project/chen/envs/ocp-models
-```
-Here are some operations that usefull and not in this tutorial.
 
-To show the size of the dictionary
-```Bash
-du -h <Path> 
-```
-To show the file counts of the dictionary
-```Bash
-find <Path> -type f | wc -l 
-```
-To kill the squeue:
-```Bash
-scancel <pid> 
-```
-to catch up a task
-```Bash
-cat myjob.o<123456> 
-```
-
-### RSC key set up
-To authorize your local machine, you can add the RSC key to the server so that you don't need to type the password each time.
-On your local machine:
-```Bash
-ssh-keygen -t rsa -b 4096
-```
-You will be prompted to enter the file path where the key will be saved. By default, it is saved in
-```Bash
-~/.ssh/id_rsa
-```
-Type enter two times to skip the path and passphrase.
-Then copy the generated public key to the remote server
-```Bash
-ssh-copy-id <username>@<remote_host>
-```
-Now the settings are finished, you can log in to the server to check if you still need the password.
-You can find it on 
-```Bash
-~/.ssh/authorized_keys
-```
-You can do more operations on it, such as adding several locals to connect to the server or connect the servers in between.
 ### Jupyter notebook set up
 
 It's not convinient to build the code with the linux system without GUI, jupyter notebook is recomanded.
