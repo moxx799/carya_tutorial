@@ -69,16 +69,19 @@ git init
 ```
 ```Bash
 git add .
-``````Bash
+```
+```Bash
 git commit -m "first commit"
-``````Bash
+```
+```Bash
 git branch -M main
 ```
 Now, you need to create a new repository on the Github website without creating the .readme, .gitignore or licence.
 ```Bash
 git remote add origin https://github.com/moxx799/<repository>.git
 ```
-``````Bash
+```
+```Bash
 git push -u origin main
 ```
 Now, a new repository is created, both exist in your local and remote.
