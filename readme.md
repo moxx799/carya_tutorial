@@ -214,12 +214,14 @@ Some of the Ml tasks save the logs as tensorboard, you can open it on your local
    login `127.0.0.1:16006` or `localhost:16006`
 
 ## Set up remote vscode in compute node rather than login node
+VS-Code remote ssh is another option, it contains several functional extensions, you can run it interactively even on a node.
 ref: https://github.com/microsoft/vscode-remote-release/issues/1722#issuecomment-1483162486
 ref: https://code.visualstudio.com/docs/remote/tunnels
 1. Install Code CLI `curl -Lk 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64' --output vscode_cli.tar.gz` then `tar -xf vscode_cli.tar.gz`
 2. Qequest a node` salloc -t 1:00:00 -n 24 --gpus=1 -N 1`
 3. Create a tunnel by `./code tunnel `, select the github and use the code output to connect the account on https://github.com/login/device
 4. Open VSCode on local machine, ctrl+shift+p and type "tunnel" to find the "Remote-Tunnels: Connect to Tunnel..." command. The tunnel I created shows up in the list, click it.
+5. You need to install the extensions when you first launch it.
 
 # some other operations as memo
 To combine the csv files with same head,Go to the directory containing the CSV files
