@@ -75,7 +75,7 @@ git commit -m "first commit"
 git branch -M main
 ```
 Now, you need to create a new repository on the Github website without creating the .readme, .gitignore or licence.
-``````Bash
+```Bash
 git remote add origin https://github.com/moxx799/<repository>.git
 ```
 ``````Bash
