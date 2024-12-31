@@ -1,4 +1,4 @@
-# Tutorials of carya on university of Houston
+# Tutorials of carya at University of Houston
 
 ## Carya
 
@@ -6,31 +6,31 @@
 See the details with the following link
 https://uh.edu/rcdc/getting-started/
 
-### Step 2: Basical operations
-There two positions for your operation,Your local dictionary and the PI's dictionary.Typically, put your code into your local dict and the Data,virtual files, ex. conda envs, into your PI's dict.
+### Step 2: Basic operations
+There are two positions for your operation, Your local dictionary and the PI's dictionary. Typically, put the code and Data into your PI's dictionary.
 
-Your local dictionray (Disk space:only 10G):
+Your local dictionary (Disk space: only 10G):
 ```Bash
 cd ~
 ```
-Your Pi's dictionray (By your request, 4T):
+Your Pi's dictionary (By your request, 4T):
 ```Bash
 cd /project/<PI name>/<your user name>/
 ```
-If there is no folder in with your user name, make it by yourself.
+If there is no folder with your user name, make it by yourself.
 ```Bash
 mkdir /project/<PI name>/<your user name>
 ```
-Here are some common commands, skip it if your are familiar with it.
+Here are some common commands, skip them if you are familiar with them.
 
-To remove a file or a foler recursively:
+To remove a file or a folder recursively:
 ```Bash
 rm <file path>
 ```
 ```Bash
 rm -r <fold path>
 ```
-other commands: move, compress and extract files:
+other commands: move, compress, and extract files:
 ```Bash
 mv <file path> <destination path>
 ```
@@ -53,7 +53,7 @@ kill -9 or -15 pid
 ### Step 3: Please follow the operations with the official operation from UH HPC center
 https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters/
 
-Quick command for activate the conda env:
+Quick command to activate the conda env:
 ```Bash
 module add Miniconda3/py310
 source  $(dirname `which python`)/../etc/profile.d/conda.sh
@@ -73,7 +73,7 @@ To kill the squeue:
 ```Bash
 scancel <pid> 
 ```
-to catch up a task
+to catch up on a task
 ```Bash
 cat myjob.o<123456> 
 ```
@@ -101,7 +101,7 @@ You can find it on
 You can do more operations on it, such as adding several locals to connect to the server or connect the servers in between.
 
 ### some git operations:
-When you start a new project, it is highly recommended to use Github as the project manager.
+When you start a new project, using Github as the project manager is highly recommended.
 How to copy from an existing repo.
 
 ```Bash
@@ -167,15 +167,15 @@ git stash pop
 
 ### Jupyter notebook set up
 
-It's not convinient to build the code with the linux system without GUI, jupyter notebook is recomanded.
+It's not convenient to build the code with the linux system without GUI, jupyter notebook is recommended.
 
-Here are the method to set up:
+Here are the methods to set up:
 * Set up conda env and activate it, following the UH tutorial
 * Install jupyter
 ```Bash
 conda install jupyter lab
 ```
-* Set up server
+* Set up the server
 ```Bash 
 jupyter lab --no-browser --ip=127.0.0.1 --port=88<xx> 
 ```
@@ -188,7 +188,7 @@ http://127.0.0.1:8890/?token=gcf45711b1540d5004eff093e7fe8a511d339b28d6171012
 ssh -l <username> carya.rcdc.uh.edu -L 88<xx>:127.0.0.1:88<xx>
 ```
 * The address above can be a 4-digit number like 8888, replace and change the number by yourself if the port cannot be listened.
-* Afterwhile you can login the address and start to use the jupyter on your local machine.
+* Afterward, you can login to the address and use the jupyter on your local machine.
 
 #### To the task that in a compute node,
 * first you need to request a computer node:
@@ -204,7 +204,7 @@ jupyter lab --no-browser --ip=127.0.0.1 --port=88<xx>
 ```Bash 
 lsof -i :88<xx>
 ```  
-### Tensorboard remote set up
+### Tensorboard remote setup
 Some of the Ml tasks save the logs as tensorboard, you can open it on your local browser as the following:
 1. on local:
    `ssh -L 16006:127.0.0.1:6006 user@server`
