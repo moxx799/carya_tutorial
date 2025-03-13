@@ -222,6 +222,12 @@ ref: https://code.visualstudio.com/docs/remote/tunnels
 3. Create a tunnel by `./code tunnel `, select the github and use the code output to connect the account on https://github.com/login/device
 4. Open VSCode on local machine, ctrl+shift+p and type "tunnel" to find the "Remote-Tunnels: Connect to Tunnel..." command. The tunnel I created shows up in the list, click it.
 5. You need to install the extensions when you first launch it.
+If it does not work, maybe is the permission problem, use the code below.
+```Bash
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+chmod 755 ~  # Home directory
+``` 
 
 # some other operations as memo
 To combine the csv files with same head,Go to the directory containing the CSV files
